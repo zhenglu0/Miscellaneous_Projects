@@ -30,7 +30,6 @@ CMakeFiles
 lib
 gtest-prefix
 CMakeCache.txt
-Makefile
 binaries
 codecs
 Testing
