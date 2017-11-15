@@ -22,7 +22,7 @@ public enum Suit {
 
 	public int getValue() { return value; }
 
-	public static Suit getSuitFromValue(int value) { Ö }
+	public static Suit getSuitFromValue(int value) { ‚Ä¶ }
 
 }
 
@@ -151,7 +151,7 @@ public class BlackJackHand extends Hand<BlackJackCard> {
 	/* return a list of all possible scores this hand could have
 	 * (evaluating each ace as both 1 and 11 */
 
-	private ArrayList<Integer> possibleScores() { Ö }
+	private ArrayList<Integer> possibleScores() { ‚Ä¶ }
 
 	public boolean busted() { return score() > 21; }
 
@@ -447,26 +447,26 @@ class Respondent extends Employee {
 
 // Now that we have that out of the way, we'll outline the basic system components.
 
-// ï Jukebox
-// ï CD
-// ï Song
-// ï Artist
-// ï Playlist
-// ï Display (displays details on the screen)
+// ‚Ä¢ Jukebox
+// ‚Ä¢ CD
+// ‚Ä¢ Song
+// ‚Ä¢ Artist
+// ‚Ä¢ Playlist
+// ‚Ä¢ Display (displays details on the screen)
 
-// Now, letís break this down further and think about the possible actions.
+// Now, let‚Äôs break this down further and think about the possible actions.
 
-// ï Playlist creation (includes add, delete, and shuffle)
-// ï CD selector
-// ï Song selector
-// ï Queuing up a song
-// ï Get next song from playlist
+// ‚Ä¢ Playlist creation (includes add, delete, and shuffle)
+// ‚Ä¢ CD selector
+// ‚Ä¢ Song selector
+// ‚Ä¢ Queuing up a song
+// ‚Ä¢ Get next song from playlist
 
 // A user also can be introduced:
 
-// ï Adding
-// ï Deleting
-// ï Credit information
+// ‚Ä¢ Adding
+// ‚Ä¢ Deleting
+// ‚Ä¢ Credit information
 
 // Each of the main system components translates roughly to an object, and each action
 // translates to a method. Let's walk through one potential design.
@@ -489,7 +489,7 @@ public class Jukebox {
 
 		Set<CD> cdCollection, SongSelector ts) {
 
-		Ö
+		‚Ä¶
 
 	}
 
@@ -551,7 +551,7 @@ public class Playlist {
 
 	public Playlist(Song song, Queue<Song> queue) {
 
-		Ö
+		‚Ä¶
 
 	}
 
@@ -598,7 +598,7 @@ public class User {
 
 	private long ID;
 
-	public User(String name, long iD) { Ö }
+	public User(String name, long iD) { ‚Ä¶ }
 
 	public User getUser() { return this; }
 
@@ -617,12 +617,12 @@ public class User {
 // specific assumptions to add a bit of complexity to the problem without adding too much.
 // If you made different assumptions, that's totally fine.
 
-// ï The parking lot has multiple levels. Each level has multiple rows of spots.
-// ï The parking lot can park motorcycles, cars, and buses.
-// ï The parking lot has motorcycle spots, compact spots, and large spots.
-// ï A motorcycle can park in any spot.
-// ï A car can park in either a single compact spot or a single large spot.
-// ï A bus can park in five large spots that are consecutive and within the same row. It
+// ‚Ä¢ The parking lot has multiple levels. Each level has multiple rows of spots.
+// ‚Ä¢ The parking lot can park motorcycles, cars, and buses.
+// ‚Ä¢ The parking lot has motorcycle spots, compact spots, and large spots.
+// ‚Ä¢ A motorcycle can park in any spot.
+// ‚Ä¢ A car can park in either a single compact spot or a single large spot.
+// ‚Ä¢ A bus can park in five large spots that are consecutive and within the same row. It
 // cannot park in small spots.
 
 // In the below implementation, we have created an abstract class Vehicle, from which
@@ -703,14 +703,14 @@ public class Motorcycle extends Vehicle {
 
 	}
 
-	public boolean canFitInSpot(ParkingSpot spot) { Ö }
+	public boolean canFitInSpot(ParkingSpot spot) { ‚Ä¶ }
 
 }
 
 // The ParkingLot class is essentially a wrapper class for an array of Levels. By
 // implementing it this way, we are able to separate out logic that deals with actually
 // finding free spots and parking cars out from the broader actions of the ParkingLot. If we
-// didnít do it this way, we would need to hold parking spots in some sort of double array
+// didn‚Äôt do it this way, we would need to hold parking spots in some sort of double array
 // (or hash table which maps from a level number to the list of spots). It's cleaner to just
 // separate ParkingLot from Level.
 
@@ -813,11 +813,11 @@ public class ParkingSpot {
 // Since the problem doesn't describe much about the functionality, let's assume we want
 // to design a basic online reading system which provides the following functionality:
 
-// ï User membership creation and extension.
-// ï Searching the database of books.
-// ï Reading a book.
-// ï Only one active user at a time
-// ï Only one active book by this user.
+// ‚Ä¢ User membership creation and extension.
+// ‚Ä¢ Searching the database of books.
+// ‚Ä¢ Reading a book.
+// ‚Ä¢ Only one active user at a time
+// ‚Ä¢ Only one active book by this user.
 
 // To implement these operations we may require many other functions, like get, set,
 // update, and so on. The objects required would likely include User, Book, and Library.
@@ -1119,10 +1119,10 @@ public class User {
 // As we solve the jigsaw puzzle (manually or algorithmically), we'll need to store the
 // position of each piece. We could think about the position as absolute or relative:
 
-// ï Absolute Position: "This piece is located at position (12, 23)." Absolute position
+// ‚Ä¢ Absolute Position: "This piece is located at position (12, 23)." Absolute position
 // would belong to the Piece class itself and would include an orientation as well.
-// ï Relative Position: ìI donít know where this piece is actually located, but I know that it
-// is next to this other piece.î The relative position would belong to the Edge class.
+// ‚Ä¢ Relative Position: ‚ÄúI don‚Äôt know where this piece is actually located, but I know that it
+// is next to this other piece.‚Äù The relative position would belong to the Edge class.
 
 // For our solution, we will use only the relative position, by adjoining edges to neighboring
 // edges.
@@ -1220,7 +1220,7 @@ public void sort() {
 
 // The spiral comes from the fact that the algorithm always moves in a straight line,
 // whenever possible. When we reach the end of the first edge, the algorithm moves to the
-// only available edge on that corner pieceóa 90-degree turn. It continues to take 90-
+// only available edge on that corner piece‚Äîa 90-degree turn. It continues to take 90-
 // degree turns at the end of each side until the entire outer edge of the puzzle is
 // completed. When that last edge piece is in place, that piece only has one exposed edge
 // remaining, which is again a 90-degree turn. The algorithm repeats itself for subsequent
@@ -1327,7 +1327,7 @@ private Edge getExposedEdge(Piece p) {
 	return null;
 }
 
-// For simplicity, weíre represented inners and outers as an Edge array. This is actually
+// For simplicity, we‚Äôre represented inners and outers as an Edge array. This is actually
 // not a great choice, since we need to add and removed elements from it frequently. If we
 // were writing a real code, we would probably want to implement these variables as
 // linked lists.
@@ -1350,12 +1350,12 @@ private Edge getExposedEdge(Piece p) {
 
 // This is also something to discuss, but here are some ideas:
 
-// ï Signing online and offline.
-// ï Add requests (sending, accepting, and rejecting).
-// ï Updating a status message.
+// ‚Ä¢ Signing online and offline.
+// ‚Ä¢ Add requests (sending, accepting, and rejecting).
+// ‚Ä¢ Updating a status message.
 
-// ï Creating private and group chats.
-// ï Adding new messages to private and group chats.
+// ‚Ä¢ Creating private and group chats.
+// ‚Ä¢ Adding new messages to private and group chats.
 
 // This is just a partial list. If you have more time, you can add more actions.
 
@@ -1374,8 +1374,8 @@ private Edge getExposedEdge(Piece p) {
 // potentially use BigTable or a similar system.
 
 // For communication between the client and servers, using XML will work well. Although
-// itís not the most compressed format (and you should point this out),
-// itís nice because it's easy for both computers and humans to read. Using XML will make
+// it‚Äôs not the most compressed format (and you should point this out),
+// it‚Äôs nice because it's easy for both computers and humans to read. Using XML will make
 // your debugging efforts easier and that matters a lot.
 
 // The server will consist of a set of machines. Data will be divided up across machines,
@@ -1478,11 +1478,11 @@ public class User {
 
 	private String fullName;
 
-	public User(int id, String accountName, String fullName) { Ö }
+	public User(int id, String accountName, String fullName) { ‚Ä¶ }
 
-	public boolean sendMessageToUser(User to, String content){ Ö }
+	public boolean sendMessageToUser(User to, String content){ ‚Ä¶ }
 
-	public boolean sendMessageToGroupChat(int id, String cnt){ Ö }
+	public boolean sendMessageToGroupChat(int id, String cnt){ ‚Ä¶ }
 
 	public void setStatus(UserStatus status) { ... }
 
@@ -1490,17 +1490,17 @@ public class User {
 
 	public boolean addContact(User user) { ... }
 
-	public void receivedAddRequest(AddRequest req) { Ö }
+	public void receivedAddRequest(AddRequest req) { ‚Ä¶ }
 
 	public void sentAddRequest (AddRequest req) { ... }
 
 	public void removeAddRequest(AddRequest req) { ... }
 
-	public void requestAddUser(String accountName) { Ö }
+	public void requestAddUser(String accountName) { ‚Ä¶ }
 
-	public void addConversation(PrivateChat conversation) { Ö }
+	public void addConversation(PrivateChat conversation) { ‚Ä¶ }
 
-	public void addConversation(GroupChat conversation) { Ö }
+	public void addConversation(GroupChat conversation) { ‚Ä¶ }
 
 	public int getld() { ... }
 
@@ -1522,9 +1522,9 @@ public abstract class Conversation {
 
 	protected ArrayList<Message> messages;
 
-	public ArrayList<Message> getMessages() { Ö }
+	public ArrayList<Message> getMessages() { ‚Ä¶ }
 
-	public boolean addMessage(Message m) { Ö }
+	public boolean addMessage(Message m) { ‚Ä¶ }
 
 	public int getld() { ... }
 
@@ -1542,7 +1542,7 @@ public class PrivateChat extends Conversation {
 
 	public PrivateChat(User user1, User user2) { ...
 
-	public User getOtherParticipant(User primary) { Ö }
+	public User getOtherParticipant(User primary) { ‚Ä¶ }
 
 }
 
@@ -1556,7 +1556,7 @@ public class Message {
 
 	public String getContent() { ... }
 
-	public Date getDate() { Ö }
+	public Date getDate() { ‚Ä¶ }
 
 }
 
@@ -1573,9 +1573,9 @@ public class AddRequest {
 
 	Requeststatus status;
 
-	public AddRequest(User from, User to, Date date) { Ö }
+	public AddRequest(User from, User to, Date date) { ‚Ä¶ }
 
-	public RequestStatus getStatus() { Ö }
+	public RequestStatus getStatus() { ‚Ä¶ }
 
 	public User getFromUser() { ... }
 
@@ -1629,13 +1629,13 @@ public enum RequestStatus {
 
 // Q3: How do we make our server scale?
 
-// While we designed out chat server without worryingótoo muchóabout scalability, in
+// While we designed out chat server without worrying‚Äîtoo much‚Äîabout scalability, in
 // real life this would be a concern. We'd need to split our data across many servers,
 // which would increase our concern about out-of-sync data.
 
 // Q4: How we do prevent denial of service attacks?
 
-// Clients can push data to usówhat if they try to DOS (denial of service) us? How do we
+// Clients can push data to us‚Äîwhat if they try to DOS (denial of service) us? How do we
 // prevent that?
 
 
@@ -1646,7 +1646,7 @@ public enum RequestStatus {
 // The game ends when either user has no more valid moves. The win is assigned
 // to the person with the most pieces.
 
-// Letís start with an example. Suppose we have the following moves in an Othello game:
+// Let‚Äôs start with an example. Suppose we have the following moves in an Othello game:
 
 // . Initialize the board with two black and two white pieces in the center. The black
 // pieces are placed at the upper left hand and lower right hand corners.
@@ -1778,7 +1778,7 @@ public class Board {
 
 	public boolean placeColor(int row, int column, Color color) {
 
-		Ö
+		‚Ä¶
 
     }
 
@@ -2022,15 +2022,15 @@ public class Directory extends Entry {
 
 // At we might think our data structure would look something like this:
 
-public class Hash<K, V> {
+// public class Hash<K, V> {
 
-	LinkedList<V>[ ] items;
+// 	LinkedList<V>[ ] items;
 
-	public void put(K key, V value) { ... }
+// 	public void put(K key, V value) { ... }
 
-	public V get(K key) { . . . }
+// 	public V get(K key) { . . . }
 
-}
+// }
 
 // Note that items is an array of linked lists, where items [i] is a linked list of all objects with
 // keys that map to index i (that is, all the objects that collided at i).
@@ -2039,11 +2039,11 @@ public class Hash<K, V> {
 
 // Suppose we have a very simple hash function that uses the string length.
 
-public int hashCodeOfKey(K key) {
+// public int hashCodeOfKey(K key) {
 
-	return key.toString() .length() % items.length;
+// 	return key.toString() .length() % items.length;
 
-}
+// }
 
 // The keys jim and bob will map to the same index in the array, even though they are
 // different keys. We need to search through the linked list to find the actual object that
