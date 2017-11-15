@@ -1,3 +1,4 @@
-## Miscellaneous Projects for fun and study purpose
+## Miscellaneous Projects for Fun and Study Purpose
 
 * Other Stuffs
+* OOD
